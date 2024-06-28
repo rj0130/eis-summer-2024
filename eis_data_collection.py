@@ -101,11 +101,14 @@ def main():
     """
     Main function to load data, generate plots, and analyze results.
     """
+    # Define the path to the input Excel file
+    filename = "/Users/raejeong/coding/eis/eis_data_input.xlsx"
+    
     # Load data from Excel
-    data = load_data("eis_data_input.xlsx")
+    data = load_data(filename)
     
     # Store data to a new Excel file (optional)
-    store_sample_data(data, "eis_data_output.xlsx")
+    store_sample_data(data, "/Users/raejeong/coding/eis/eis_data_output.xlsx")
     
     # Generate plots
     generate_bode_plot(data)
